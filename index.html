@@ -2,50 +2,46 @@
 <html lang="it">
 <head>
   <meta charset="UTF-8">
-  <title>Test Iframe</title>
+  <meta name="viewport" content="width=1024, height=1536">
+  <title>Iframe Page</title>
   <style>
     html, body {
       margin: 0;
       padding: 0;
-      width: 1024px;   /* dimensione reale prima dello scaling */
-      height: 1536px;  /* dimensione reale prima dello scaling */
+      width: 1024px;
+      height: 1536px;
       font-family: sans-serif;
       background: #f0f0f0;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
+      overflow: hidden;
     }
-    h1 {
-      font-size: 48px;
-      color: #333;
-    }
-    p {
-      font-size: 32px;
-      color: #555;
-    }
-    .box {
-      width: 800px;
-      height: 1200px;
-      background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      border-radius: 20px;
-      box-shadow: 0 0 20px rgba(0,0,0,0.3);
-    }
-    .box p {
-      color: white;
-      font-size: 64px;
+
+    /* esempio di contenuto centrato */
+    .content {
+      width: 1000px;
+      margin: 20px auto;
       text-align: center;
+    }
+
+    h1 {
+      font-size: 48px; /* apparirà come 12px nello iframe */
+    }
+
+    p {
+      font-size: 24px; /* apparirà come 6px nello iframe */
+    }
+
+    button {
+      font-size: 32px; /* apparirà come 8px nello iframe */
+      padding: 20px 40px;
+      cursor: pointer;
     }
   </style>
 </head>
 <body>
-  <h1>Test Iframe</h1>
-  <div class="box">
-    <p>Contenuto leggibile con il tuo CSS</p>
+  <div class="content">
+    <h1>Benvenuto!</h1>
+    <p>Questa pagina è ottimizzata per il tuo iframe 256x384.</p>
+    <button>Click me</button>
   </div>
-  <p>Scala correttamente dentro 256x384 container</p>
 </body>
 </html>
